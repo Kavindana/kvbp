@@ -1,214 +1,175 @@
 # Kavindana Vishwa Bandara Dissanayaka - Portfolio Website
 
 ## Overview
-This is a unique, dark-themed portfolio website for Kavindana Vishwa Bandara Dissanayaka, a 19-year-old creative developer and storyteller from Sri Lanka. The website is designed to reflect his unique blend of technical skills and creative expression, as described in his personal essay.
+This is a dark-themed, animated portfolio website for Kavindana Vishwa Bandara Dissanayaka, a 19-year-old creative developer and storyteller from Sri Lanka. The website showcases his unique blend of technology and creativity, with smooth animations, interactive elements, and a responsive design.
 
 ## Features
-- **Dark Theme Design**: Sophisticated dark interface with accent colors for visual appeal
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Advanced Animations**: CSS animations inspired by Prismic.io and modern portfolio examples
-- **Interactive Elements**: Hover effects, scroll-triggered animations, and interactive components
-- **Performance Optimized**: Lazy loading, optimized assets, and efficient code
-- **Accessibility**: Semantic HTML, ARIA labels, and keyboard navigation support
+- **Dark Theme Design**: Eye-friendly dark interface with accent colors
+- **Smooth Animations**: CSS animations inspired by Prismic.io examples
+- **Responsive Layout**: Works on all devices from mobile to desktop
+- **Interactive Elements**: Hover effects, typing animation, scroll animations
+- **Email Integration**: Contact form powered by EmailJS
+- **Accessibility**: Semantic HTML and keyboard navigation support
 
-## Project Structure
+## File Structure
 portfolio/
 ├── index.html # Main HTML file
 ├── style.css # All CSS styles and animations
-├── script.js # Interactive JavaScript functionality
+├── script.js # JavaScript for interactivity
 ├── README.md # This documentation file
 └── assets/
-├── images/ # All portfolio images
-│ ├── hero-bg.jpg # Hero background image
-│ ├── profile.jpg # Profile picture
-│ ├── project1.jpg # Project 1 screenshot
-│ ├── project2.jpg # Project 2 screenshot
-│ ├── project3.jpg # Project 3 screenshot
-│ └── sri-lanka-flag.svg # Sri Lankan flag icon
-└── icons/ # Icon assets
+└── images/ # All image assets
+├── hero-bg.jpg # Hero background image
+├── profile.jpg # Profile picture
+├── web-project.jpg # Web project thumbnail
+├── game-project.jpg # Game project thumbnail
+└── storytelling-project.jpg # Storytelling project thumbnail
 
 text
 
-## Image Requirements for AI Generation
+## Setup Instructions
 
-### 1. Profile Picture (profile.jpg)
-- **Pose**: Thoughtful, looking slightly away from camera, natural lighting
-- **Setting**: Modern workspace with laptop, subtle Sri Lankan elements in background
-- **Style**: Professional yet approachable, dark theme-appropriate colors
-- **Dimensions**: 600x800 pixels, portrait orientation
+### 1. Image Requirements
+Create or generate the following images (recommended size: 1200x800 for backgrounds, 400x400 for profile):
 
-### 2. Hero Background (hero-bg.jpg)
-- **Concept**: Abstract digital art representing fusion of code and creativity
-- **Elements**: Floating code snippets, geometric shapes, subtle gradients
-- **Colors**: Dark blues and purples with accent colors matching website palette
-- **Dimensions**: 1920x1080 pixels, landscape orientation
+1. **hero-bg.jpg**: Dark, tech-themed background with subtle patterns or code elements
+2. **profile.jpg**: Professional/creative portrait (AI prompt: "thoughtful 19-year-old Sri Lankan developer with laptop, dark academic setting")
+3. **web-project.jpg**: Web development project screenshot
+4. **game-project.jpg**: Game development project visual
+5. **storytelling-project.jpg**: Creative writing/digital storytelling project visual
 
-### 3. Project Images
-- **Project 1**: Screenshot of a game interface with Sri Lankan cultural elements
-- **Project 2**: Web development project with creative coding elements
-- **Project 3**: UI/UX design with poetic code visualization
-- **Dimensions**: 800x600 pixels for each, consistent visual style
+### 2. EmailJS Configuration
+The contact form uses EmailJS with these credentials:
+- Service ID: `service_7npo3u2`
+- Template ID: `template_wh2o26s`
+- Public Key: `nAp-Qh32-VZtsudlt`
 
-## Design Principles
+These are already configured in the HTML and JavaScript files.
 
-### Color Palette
-- **Primary Dark**: #0a0a0f (Almost black)
-- **Secondary Dark**: #12121a (Dark blue-gray)
-- **Accent Color**: #6c63ff (Vibrant purple-blue)
-- **Text Primary**: #f0f0f0 (Off-white)
-- **Text Secondary**: #b0b0c0 (Light gray-blue)
+### 3. Deployment
+1. Upload all files to your web hosting service
+2. Ensure all image paths are correct
+3. Test the contact form with a test message
 
-### Typography
-- **Headings**: 'Space Grotesk' - Modern, geometric sans-serif
-- **Body Text**: 'Poppins' - Clean, readable sans-serif
-- **Hierarchy**: Clear visual hierarchy with appropriate font weights and sizes
+## Code Structure Details
 
-### Animations
-1. **Loading Animation**: Pulsing logo with progress bar
-2. **Floating Shapes**: Background elements with parallax effect
-3. **Scroll Triggers**: Elements fade in as user scrolls
-4. **Hover Effects**: Interactive buttons, cards, and links
-5. **Skill Bars**: Animated progress bars for skills section
+### HTML (index.html)
+- **Semantic Structure**: Uses proper HTML5 semantic elements
+- **Section Organization**:
+  - Hero Section: Introduction with typing animation
+  - About Me: Personal information and traits
+  - Creative Fusion: Showcases philosophy of blending art and tech
+  - Projects: Portfolio work showcase
+  - Contact: Form and contact information
+- **Accessibility**: ARIA labels and proper heading hierarchy
 
-## Code Organization
+### CSS (style.css)
+- **CSS Variables**: Centralized design tokens for easy customization
+- **Animation Keyframes**:
+  - `float`: For background shapes
+  - `slideInLeft/Right`: Entrance animations
+  - `bounce`: Scroll indicator animation
+  - `blink`: Typing cursor animation
+- **Responsive Design**: Media queries for tablet and mobile
+- **Dark Theme**: Carefully selected color palette for readability
 
-### HTML Structure
-- Semantic HTML5 elements for accessibility
-- Clear section hierarchy with proper IDs for navigation
-- Optimized image tags with alt attributes
-- Proper meta tags for SEO and mobile optimization
+### JavaScript (script.js)
+- **Typing Animation**: Rotates through different roles
+- **Scroll Animations**: Triggers animations when elements enter viewport
+- **Form Handling**: EmailJS integration with success/error states
+- **Interactive Elements**: Hover effects, mobile menu toggle
+- **Smooth Scrolling**: For navigation links
 
-### CSS Architecture
-- CSS Variables for consistent theming
-- Mobile-first responsive design approach
-- BEM-like naming convention for clarity
-- Separate sections for different components
-- Animation keyframes defined at appropriate locations
+## Customization Guide
 
-### JavaScript Modules
-1. **Loading Screen**: Controls initial page loading experience
-2. **Navigation**: Handles mobile menu, smooth scrolling, active states
-3. **Animations**: Manages scroll-triggered and interactive animations
-4. **Form Handling**: Contact form validation and submission
-5. **Utilities**: Helper functions for counters, notifications, etc.
-
-## Customization Instructions
-
-### Changing Colors
-Edit the CSS variables in the `:root` selector in `style.css`:
+### Change Colors
+Edit the CSS variables in `style.css`:
 ```css
 :root {
-    --primary-dark: #0a0a0f;
-    --secondary-dark: #12121a;
-    --accent-color: #6c63ff;
+    --primary-bg: #0a0a0f;
+    --accent-primary: #00b4d8;
     /* ... other variables */
 }
-Adding New Projects
-Add a new project card in the projects-grid section in index.html
+Update Content
+Personal Information: Update text in index.html
 
-Update the project count in the About section stats
+Projects: Modify project cards in the Projects section
 
-Add corresponding image to the assets/images/ folder
+Images: Replace placeholder images in assets/images/
 
-Updating Personal Information
-Replace placeholder text in index.html with your actual information
+Add New Sections
+Add new HTML section with proper ID
 
-Update social media links in the Hero and Contact sections
+Add corresponding CSS styles
 
-Modify the skills percentages in the Skills section
+Update navigation links if needed
 
-Adding New Sections
-Add new HTML section with appropriate ID
+Animation References
+This website uses animations inspired by:
 
-Update navigation links in the navbar
+Prismic.io CSS Animation Examples: For smooth transitions and entrance effects
 
-Add corresponding CSS styles in style.css
+Modern Portfolio Trends: Card hover effects, typing animations
 
-Add any required JavaScript functionality in script.js
+Creative Coding Principles: Code display animations, interactive elements
 
-Performance Optimizations
-Images
-All images are optimized for web (compressed)
+Browser Support
+Chrome (latest)
 
-Lazy loading implemented for off-screen images
+Firefox (latest)
 
-Proper dimensions specified to prevent layout shifts
+Safari (latest)
 
-Code
-CSS and JavaScript are minified in production
+Edge (latest)
 
-Unused CSS is removed
+Performance Notes
+Images are optimized for web
 
-JavaScript loads asynchronously where possible
+CSS animations use transform and opacity for GPU acceleration
 
-Animations
-Uses CSS animations for better performance
-
-Respects prefers-reduced-motion user preference
-
-Optimized with will-change property where appropriate
-
-Browser Compatibility
-Chrome 60+ (Full support)
-
-Firefox 55+ (Full support)
-
-Safari 12+ (Full support)
-
-Edge 79+ (Full support)
-
-iOS Safari 12+ (Full support)
-
-Chrome for Android (Full support)
-
-Future Enhancements
-Light/Dark Mode Toggle: Already implemented in JavaScript
-
-Project Filtering: Filter projects by category (web dev, games, etc.)
-
-Blog Integration: Add a blog section for articles and stories
-
-Internationalization: Support for multiple languages
-
-Advanced 3D Animations: Using Three.js for immersive visuals
-
-Credits
-Design inspiration from Prismic.io CSS animations blog
-
-Fonts from Google Fonts (Poppins, Space Grotesk)
-
-Icons from Font Awesome
-
-Color palette inspired by modern dark theme designs
+JavaScript is defer-loaded and minimal
 
 License
-This portfolio template is free to use and modify for personal and commercial projects. Attribution is appreciated but not required.
+This portfolio template is created for Kavindana Vishwa Bandara Dissanayaka. Feel free to use as inspiration for your own portfolio.
 
-Built with creativity and purpose, just like Kavindana's approach to coding and storytelling.
+Contact
+For questions or customization help, refer to the contact section on the website.
 
+text
 
-## 5. Instructions for Image Generation with AI
+## Image Generation Guide
 
-To create the perfect images for this portfolio, use these AI prompts:
+For AI image generation, use these prompts:
 
-### Profile Picture
-"Photorealistic portrait of a thoughtful 19-year-old Sri Lankan male, sitting at a modern workspace with a laptop, subtle smile, natural lighting, dark themed background with floating digital elements, professional yet creative vibe, 8k resolution"
+1. **Hero Background**: "dark tech background with glowing code lines, abstract digital art, deep blue and purple tones, futuristic"
+   
+2. **Profile Picture**: "thoughtful 19-year-old Sri Lankan male with laptop, in a creative workspace, soft lighting, professional portrait, dark academic setting"
 
+3. **Web Project**: "modern web development interface screenshot, dark theme, creative design, code editor visible"
 
-### Hero Background
-"Abstract digital art, dark blue and purple gradient background with floating geometric shapes, glowing code snippets in the air, ethereal particles, futuristic yet creative atmosphere, 1920x1080, trending on ArtStation"
+4. **Game Project**: "2D game development screenshot with Sri Lankan mythological elements, pixel art style, adventure game UI"
 
-### Project Images
-1. **Game Project**: "Screenshot of a video game interface inspired by Sri Lankan folklore, vibrant colors, mythical creatures, intuitive UI, game development mockup"
-2. **Web Project**: "Creative coding portfolio website interface, dark theme with purple accents, interactive elements, code visualization, modern web design"
-3. **UI/UX Project**: "Poetic code visualization interface, text transforming into visual patterns, creative writing meets programming, elegant UI design"
+5. **Storytelling Project**: "digital poetry interface, creative writing display, elegant typography, dark theme with accent colors"
 
-## How to Use
+## EmailJS Configuration Notes
 
-1. Download all files into a folder
-2. Generate images using AI with the prompts above
-3. Place images in the `assets/images/` folder
-4. Update any personal information in `index.html`
-5. Open `index.html` in a browser to view the portfolio
+The contact form is pre-configured with:
+- Service ID: `service_7npo3u2`
+- Template ID: `template_wh2o26s` 
+- Public Key: `nAp-Qh32-VZtsudlt`
 
-This portfolio is fully functional and ready to use. The code is well-commented for easy future upgrades and customization.
+Make sure your EmailJS account has the template set up to receive:
+- `name`: Sender's name
+- `email`: Sender's email
+- `subject`: Email subject
+- `message`: Email body
+
+## To Use This Portfolio:
+
+1. **Create the image assets** using the AI prompts above
+2. **Save the images** in the `assets/images/` folder with the names specified
+3. **Upload all files** to your web hosting
+4. **Test the contact form** to ensure EmailJS is working
+5. **Customize the content** to match your specific details
+
+The portfolio is now ready! It includes all the animations, dark theme, EmailJS integration, and responsive design as requested.

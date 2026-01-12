@@ -3,542 +3,612 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kavindana Dissanayaka | Creative Developer & Storyteller</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kavindana Vishwa Bandara Dissanayaka | Creative Developer</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="assets/images/sri-lanka-flag.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("nAp-Qh32-VZtsudlt"); // Your public key
+        })();
+    </script>
 </head>
 <body>
-    <!-- Loading Screen -->
-    <div class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-logo">
-                <span class="logo-text">KD</span>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
-                <span class="logo-text">Kavindana<span class="accent">.</span></span>
-            </a>
-            
-            <div class="nav-menu">
-                <ul class="nav-links">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#story" class="nav-link">Story</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
-                
-                <div class="theme-toggle">
-                    <div class="toggle-container">
-                        <i class="fas fa-moon"></i>
-                    </div>
-                </div>
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-text">KAVINDANA</span>
+                <span class="logo-dot">.</span>
             </div>
             
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#creative" class="nav-link">Creative Fusion</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-btn">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section">
-        <div class="hero-background">
-            <div class="floating-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
+        <!-- Animated Background Elements -->
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        
+        <!-- Main Hero Content -->
+        <div class="hero-container">
+            <!-- Left Column: Text Content -->
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Kavindana Vishwa</span>
+                    <span class="title-line">Bandara Dissanayaka</span>
+                </h1>
+                
+                <!-- Typing Animation Text -->
+                <div class="typing-container">
+                    <p class="hero-subtitle">A 
+                        <span class="typing-text">
+                            <span class="typed-text"></span>
+                            <span class="cursor">&nbsp;</span>
+                        </span>
+                    </p>
+                </div>
+                
+                <p class="hero-description">
+                    At 19, I stand at the threshold between youth and adulthood, blending 
+                    storytelling with technology to create meaningful digital experiences.
+                </p>
+                
+                <!-- Call to Action Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                
+                <!-- Sri Lankan Identity Badge -->
+                <div class="identity-badge">
+                    <div class="flag-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <span>Proudly Sri Lankan</span>
+                </div>
+            </div>
+            
+            <!-- Right Column: Profile Image -->
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <!-- Profile image will be added here via CSS -->
+                    <div class="profile-image"></div>
+                    
+                    <!-- Decorative elements around image -->
+                    <div class="image-decoration">
+                        <div class="code-snippet">
+                            <span class="code-line">function createStory() {</span>
+                            <span class="code-line">  blend(art, code);</span>
+                            <span class="code-line">  return innovation;</span>
+                            <span class="code-line">}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h5 class="hero-subtitle">A Portrait of a Young Visionary</h5>
-                    <h1 class="hero-title">Kavindana <span class="accent">Vishwa Bandara</span> Dissanayaka</h1>
-                    <p class="hero-description">
-                        At 19, I stand at the threshold between youth and adulthood, weaving together storytelling, technology, and creative expression to build meaningful digital experiences.
-                    </p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">View My Work</a>
-                        <a href="#story" class="btn btn-secondary">My Story <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                    
-                    <div class="hero-social">
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-codepen"></i></a>
-                    </div>
-                </div>
-                
-                <div class="hero-image">
-                    <div class="image-container">
-                        <div class="profile-image">
-                            <img src="assets/images/profile.jpg" alt="Kavindana Dissanayaka" id="profile-img">
-                            <div class="image-border"></div>
-                            <div class="image-highlight"></div>
-                        </div>
-                        
-                        <div class="floating-elements">
-                            <div class="floating-tag coding-tag">
-                                <i class="fas fa-code"></i>
-                                <span>Creative Coding</span>
-                            </div>
-                            <div class="floating-tag storytelling-tag">
-                                <i class="fas fa-book-open"></i>
-                                <span>Digital Storytelling</span>
-                            </div>
-                            <div class="floating-tag sri-lanka-tag">
-                                <img src="assets/images/sri-lanka-flag.svg" alt="Sri Lanka" class="flag-icon">
-                                <span>Proudly Sri Lankan</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
             </div>
-            
-            <div class="scroll-indicator">
-                <span>Scroll to explore</span>
-                <div class="scroll-line">
-                    <div class="scroll-dot"></div>
-                </div>
-            </div>
+            <p>Scroll to explore</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="section about-section">
+    <!-- About Me Section -->
+    <section id="about" class="about-section">
         <div class="section-container">
             <div class="section-header">
-                <h5 class="section-subtitle">A Unique Young Mind</h5>
-                <h2 class="section-title">About <span class="accent">Me</span></h2>
-                <div class="section-divider"></div>
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">The thoughtful visionary at a crossroads</p>
+                <div class="title-line"></div>
             </div>
             
             <div class="about-content">
-                <div class="about-image">
-                    <div class="about-image-container">
-                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Creative Workspace">
-                        <div class="about-image-overlay">
-                            <div class="quote-box">
-                                <i class="fas fa-quote-left"></i>
-                                <p>"Coding doesn't merely solve problems; it tells stories."</p>
+                <!-- Left Column: Image and Personal Info -->
+                <div class="about-left">
+                    <div class="profile-card">
+                        <div class="profile-img-container">
+                            <!-- Profile image will be set via CSS -->
+                            <div class="main-profile-img"></div>
+                            <div class="profile-badge">
+                                <i class="fas fa-laptop-code"></i>
                             </div>
+                        </div>
+                        
+                        <div class="profile-info">
+                            <h3>Kavindana V. B. Dissanayaka</h3>
+                            <p class="profile-tag">Creative Developer & Storyteller</p>
+                            
+                            <div class="personal-details">
+                                <div class="detail-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Sri Lanka</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Undergraduate Student</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Coding, Writing, Gaming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Personality Traits -->
+                    <div class="traits-container">
+                        <h4>Personality Traits</h4>
+                        <div class="traits-list">
+                            <span class="trait">Introspective</span>
+                            <span class="trait">Disciplined</span>
+                            <span class="trait">Purposeful</span>
+                            <span class="trait">Creative</span>
+                            <span class="trait">Calm</span>
+                            <span class="trait">Visionary</span>
                         </div>
                     </div>
                 </div>
                 
-                <div class="about-text">
-                    <h3>At the Crossroads of Creativity & Technology</h3>
-                    <p>
-                        I'm a thoughtful and purposeful 19-year-old, carrying myself with a quiet confidence that belies my age. As part of a generation of Sri Lankan youth who "have been driving movements that use creativity and storytelling as tools for change," I sense this legacy deeply.
-                    </p>
-                    <p>
-                        Sri Lanka's long history of narrative and culture is in my blood, and I eagerly add my own chapter. As I finish school and begin the journey into higher learning and career, this transitional moment feels weighty – both exhilarating and reflective.
-                    </p>
-                    
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="15">0</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="5">0</div>
-                            <div class="stat-label">Creative Stories</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="3">0</div>
-                            <div class="stat-label">Game Scripts</div>
-                        </div>
+                <!-- Right Column: Description -->
+                <div class="about-right">
+                    <div class="about-text">
+                        <p>
+                            At 19, I stand at the threshold between youth and adulthood, poised between 
+                            the comfort of what I know and the promise of what I might become. I am 
+                            thoughtful and purposeful, carrying myself with a quiet confidence that 
+                            belies my age.
+                        </p>
+                        
+                        <p>
+                            I am part of a generation of Sri Lankan youth who have been driving movements 
+                            that use creativity and storytelling as tools for change. Sri Lanka's long 
+                            history of narrative and culture is in my blood, and I eagerly add my own 
+                            chapter.
+                        </p>
+                        
+                        <blockquote class="quote">
+                            "I often wonder how others perceive me, what identity I have already built 
+                            and what I will build next."
+                        </blockquote>
+                        
+                        <p>
+                            As I finish school and begin the journey into higher learning and career, 
+                            this transitional moment feels weighty to me – it is both exhilarating and 
+                            reflective.
+                        </p>
                     </div>
                     
-                    <a href="#contact" class="btn btn-outline">Let's Connect <i class="fas fa-paper-plane"></i></a>
+                    <!-- Skills/Interests Visualization -->
+                    <div class="skills-visualization">
+                        <h4>Creative Domains</h4>
+                        <div class="domains">
+                            <div class="domain">
+                                <div class="domain-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h5>Web Development</h5>
+                                <div class="domain-bar">
+                                    <div class="domain-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="domain">
+                                <div class="domain-icon">
+                                    <i class="fas fa-gamepad"></i>
+                                </div>
+                                <h5>Game Scripting</h5>
+                                <div class="domain-bar">
+                                    <div class="domain-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="domain">
+                                <div class="domain-icon">
+                                    <i class="fas fa-pen-nib"></i>
+                                </div>
+                                <h5>Storytelling</h5>
+                                <div class="domain-bar">
+                                    <div class="domain-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
+    <!-- Creative Fusion Section -->
+    <section id="creative" class="creative-section">
         <div class="section-container">
             <div class="section-header">
-                <h5 class="section-subtitle">Creative Fusion</h5>
-                <h2 class="section-title">My <span class="accent">Skills</span></h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Where art meets science, and logic dances with imagination</p>
+                <h2 class="section-title">Storytelling, Technology & Creative Fusion</h2>
+                <p class="section-subtitle">Where art and science blur together</p>
+                <div class="title-line"></div>
             </div>
             
-            <div class="skills-content">
-                <div class="skills-category">
-                    <div class="category-header">
-                        <i class="fas fa-code category-icon"></i>
-                        <h3>Technical Development</h3>
-                    </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Web Development</span>
-                                <span class="skill-percent">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Game Scripting</span>
-                                <span class="skill-percent">85%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">UI/UX Design</span>
-                                <span class="skill-percent">80%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="80"></div>
-                            </div>
-                        </div>
+            <div class="creative-content">
+                <!-- Main Description -->
+                <div class="creative-description">
+                    <p>
+                        My passions span both art and science, and in my hands they blur together. 
+                        I devote myself to storytelling, web development, and game scripting with 
+                        equal vigor. In code as in prose, I seek a narrative.
+                    </p>
+                    
+                    <p>
+                        Coding is not just technical for me – it is creative. Programming is often 
+                        perceived as a purely technical skill, but in reality, it's a creative force 
+                        that shapes minds in extraordinary ways. I live this idea.
+                    </p>
+                    
+                    <div class="creative-highlight">
+                        <i class="fas fa-quote-left"></i>
+                        <p>
+                            Late at night, I tap away at my keyboard as if composing music: each loop 
+                            and function becomes a verse in my digital tale.
+                        </p>
                     </div>
                 </div>
                 
-                <div class="skills-category">
-                    <div class="category-header">
-                        <i class="fas fa-pen-nib category-icon"></i>
-                        <h3>Creative Expression</h3>
+                <!-- Interactive Code Display -->
+                <div class="code-display">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-filename">creative_fusion.js</span>
                     </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Digital Storytelling</span>
-                                <span class="skill-percent">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Creative Writing</span>
-                                <span class="skill-percent">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="88"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Visual Design</span>
-                                <span class="skill-percent">75%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="75"></div>
-                            </div>
-                        </div>
+                    
+                    <div class="code-content">
+                        <pre><code>// Blending Sri Lankan folklore with technology
+function createDigitalStory() {
+    const folklore = getSriLankanFolktales();
+    const technology = masterWebDevelopment();
+    
+    // Fusion process
+    const story = merge(folklore, technology);
+    const game = scriptInteractiveExperience(story);
+    const website = buildImmersivePortal(game);
+    
+    return {
+        story: story,
+        game: game,
+        website: website,
+        impact: "Bridging tradition with innovation"
+    };
+}
+
+// Execution
+const myProject = createDigitalStory();
+console.log(myProject.impact); 
+// Output: "Bridging tradition with innovation"</code></pre>
                     </div>
                 </div>
                 
-                <div class="skills-category">
-                    <div class="category-header">
-                        <i class="fas fa-brain category-icon"></i>
-                        <h3>Core Traits</h3>
+                <!-- Philosophy Points -->
+                <div class="philosophy-grid">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h4>Logic Meets Artistry</h4>
+                        <p>
+                            My technical skills give me structure – algorithms and data – but my 
+                            imagination colors them.
+                        </p>
                     </div>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Introspection</span>
-                                <span class="skill-percent">92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="92"></div>
-                            </div>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-history"></i>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Discipline</span>
-                                <span class="skill-percent">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info">
-                                <span class="skill-name">Purposeful Creation</span>
-                                <span class="skill-percent">96%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="96"></div>
-                            </div>
-                        </div>
+                        <h4>Cultural Integration</h4>
+                        <p>
+                            In one project I might weave Sri Lankan folktales into a video game script; 
+                            in another, I'll sketch out a poem on the back of my coding blueprint.
+                        </p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="coding-quote">
-                <div class="quote-container">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <p class="quote-text">Programming is often perceived as a purely technical skill, but in reality, it's a creative force that shapes minds in extraordinary ways.</p>
-                    <i class="fas fa-quote-right quote-icon"></i>
+                    
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Tandem Creation</h4>
+                        <p>
+                            Always, I blend logic and artistry, showing that discipline and imagination 
+                            can create in tandem.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
+    <section id="projects" class="projects-section">
         <div class="section-container">
             <div class="section-header">
-                <h5 class="section-subtitle">Creative Work</h5>
-                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Where technical skill meets narrative imagination</p>
+                <h2 class="section-title">My Projects</h2>
+                <p class="section-subtitle">Where ideas become digital reality</p>
+                <div class="title-line"></div>
             </div>
             
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project1.jpg" alt="Sri Lankan Folktale Game">
+                        <!-- Image will be set via CSS -->
+                        <div class="project-img web-project"></div>
                         <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="project-tag">Game Development</span>
-                                <span class="project-tag">Storytelling</span>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                                <span>React</span>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">Sri Lankan Folktale Adventure</h3>
-                        <p class="project-description">An interactive game that weaves traditional Sri Lankan folktales into an immersive digital experience, blending local mythology with modern gameplay mechanics.</p>
-                        <div class="project-tech">
-                            <span>Unity</span>
-                            <span>C#</span>
-                            <span>Pixel Art</span>
+                        <h3>Interactive Storytelling Platform</h3>
+                        <p>
+                            A web platform that blends traditional Sri Lankan storytelling with 
+                            interactive digital elements, allowing users to explore folktales through 
+                            animated sequences and choose-your-own-adventure pathways.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span>Web Development</span>
+                            <span>Storytelling</span>
+                            <span>Cultural Preservation</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Project 2 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project2.jpg" alt="Creative Coding Portfolio">
+                        <!-- Image will be set via CSS -->
+                        <div class="project-img game-project"></div>
                         <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="project-tag">Web Development</span>
-                                <span class="project-tag">Creative Coding</span>
+                            <div class="project-tech">
+                                <span>Unity</span>
+                                <span>C#</span>
+                                <span>Pixel Art</span>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">Narrative Web Experience</h3>
-                        <p class="project-description">A website that tells a story through interactive scroll-triggered animations, where code becomes poetry and user journey unfolds like a plot.</p>
-                        <div class="project-tech">
-                            <span>HTML/CSS/JS</span>
-                            <span>GSAP</span>
-                            <span>Three.js</span>
+                        <h3>Mythical Lanka Adventure Game</h3>
+                        <p>
+                            A 2D adventure game inspired by Sri Lankan mythology, featuring 
+                            traditional characters reimagined in a digital world. Includes puzzle 
+                            mechanics and narrative choices that affect the storyline.
+                        </p>
+                        
+                        <div class="project-tags">
+                            <span>Game Development</span>
+                            <span>Scripting</span>
+                            <span>Cultural Adaptation</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Play Demo
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
                 <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="assets/images/project3.jpg" alt="Poetic Code Interface">
+                        <!-- Image will be set via CSS -->
+                        <div class="project-img story-project"></div>
                         <div class="project-overlay">
-                            <div class="project-tags">
-                                <span class="project-tag">UI/UX Design</span>
-                                <span class="project-tag">Creative Writing</span>
+                            <div class="project-tech">
+                                <span>Creative Writing</span>
+                                <span>Digital Art</span>
+                                <span>UI/UX Design</span>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="project-content">
-                        <h3 class="project-title">Poetic Code Interface</h3>
-                        <p class="project-description">A unique programming interface where code structures are visualized as poetic verses, making the logic of programming accessible through literary forms.</p>
-                        <div class="project-tech">
-                            <span>React</span>
-                            <span>D3.js</span>
+                        <h3>Digital Poetry Collection</h3>
+                        <p>
+                            An interactive collection of original poetry with animated visual 
+                            accompaniments. Each poem explores themes of identity, transition, and 
+                            the intersection of traditional values with modern technology.
+                        </p>
+                        
+                        <div class="project-tags">
                             <span>Creative Writing</span>
+                            <span>Digital Art</span>
+                            <span>Web Animation</span>
                         </div>
-                        <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                        
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> View Collection
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="section-footer">
-                <a href="#" class="btn btn-primary">View All Projects <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Story Section -->
-    <section id="story" class="section story-section">
-        <div class="section-container">
-            <div class="section-header">
-                <h5 class="section-subtitle">National Identity & Authenticity</h5>
-                <h2 class="section-title">My <span class="accent">Sri Lankan</span> Roots</h2>
-                <div class="section-divider"></div>
-            </div>
-            
-            <div class="story-content">
-                <div class="story-text">
-                    <h3>Proudly Sri Lankan, Creatively Global</h3>
-                    <p>
-                        My sense of self is deeply bound with my roots. I carry the symbols of Sri Lankan identity in small, everyday ways - whether it's wearing the green-and-gold jersey of the Sri Lanka cricket team or having a Lion flag pin on my laptop.
-                    </p>
-                    <p>
-                        In my creative projects, I often weave in local context: a web page might feature Sri Lankan art, a game might use music inspired by traditional drums, a story might echo a Sinhalese folktale. I want my creations to speak truth about my world, not just mimic global trends.
-                    </p>
-                    
-                    <div class="story-quote">
-                        <i class="fas fa-quote-left"></i>
-                        <p>"Does it mean feeling your heart swell at the Lion flag? ... supporting the Sri Lankan cricket team?" For me, the answer is a wholehearted yes.</p>
-                    </div>
-                    
-                    <div class="story-values">
-                        <div class="value-item">
-                            <i class="fas fa-flag value-icon"></i>
-                            <h4>Cultural Pride</h4>
-                            <p>Drawing inspiration from Sri Lanka's rich heritage and traditions</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-palette value-icon"></i>
-                            <h4>Authentic Expression</h4>
-                            <p>Creating work that reflects my unique perspective and experiences</p>
-                        </div>
-                        <div class="value-item">
-                            <i class="fas fa-bridge value-icon"></i>
-                            <h4>Bridging Worlds</h4>
-                            <p>Connecting local narratives with global digital landscapes</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="story-visual">
-                    <div class="visual-container">
-                        <div class="visual-card visual-card-1">
-                            <div class="card-content">
-                                <h4>Calm & Disciplined</h4>
-                                <p>Quiet but not passive, serious but not grim - guided by purpose</p>
-                            </div>
-                        </div>
-                        <div class="visual-card visual-card-2">
-                            <div class="card-content">
-                                <h4>Intrinsically Motivated</h4>
-                                <p>Driven by personal meaning, not external applause</p>
-                            </div>
-                        </div>
-                        <div class="visual-card visual-card-3">
-                            <div class="card-content">
-                                <h4>Introspective Creator</h4>
-                                <p>Channeling reflection into meaningful creative work</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="projects-note">
+                <p>
+                    <i class="fas fa-lightbulb"></i> 
+                    These projects represent my philosophy that coding doesn't merely solve problems; 
+                    it tells stories. When I script a game level or build a website interface, I imagine 
+                    the user's journey like a plot unfolding.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="contact-section">
         <div class="section-container">
             <div class="section-header">
-                <h5 class="section-subtitle">Let's Connect</h5>
-                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
-                <div class="section-divider"></div>
-                <p class="section-description">Interested in collaboration or just want to chat about creative coding and storytelling?</p>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's create something meaningful together</p>
+                <div class="title-line"></div>
             </div>
             
             <div class="contact-content">
+                <!-- Left Column: Contact Info -->
                 <div class="contact-info">
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
+                    <div class="contact-intro">
+                        <h3>Connect With Me</h3>
+                        <p>
+                            I'm always interested in discussing collaborative projects, creative 
+                            ideas, or opportunities to blend technology with storytelling in 
+                            innovative ways.
+                        </p>
+                        
+                        <blockquote class="contact-quote">
+                            "What drives me is not external acclaim but personal meaning. I code and 
+                            create because I love the act of creating, not because I expect a reward."
+                        </blockquote>
+                    </div>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>kavindana.creative@example.com</p>
+                            </div>
                         </div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>kavindana@example.com</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Sri Lanka</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Interests</h4>
+                                <p>Storytelling, Web Dev, Game Scripting, Creative Coding</p>
+                            </div>
                         </div>
                     </div>
                     
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Location</h4>
-                            <p>Colombo, Sri Lanka</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="info-icon">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <div class="info-text">
-                            <h4>Interests</h4>
-                            <p>Creative Coding, Game Scripting, Digital Storytelling</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-codepen"></i></a>
+                    <!-- Social Links -->
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-codepen"></i>
+                        </a>
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <form id="contactForm">
+                <!-- Right Column: Contact Form -->
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
                         <div class="form-group">
+                            <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
-                            <label for="name">Your Name</label>
-                            <div class="form-line"></div>
                         </div>
                         
                         <div class="form-group">
+                            <label for="email">Email Address</label>
                             <input type="email" id="email" name="email" required>
-                            <label for="email">Your Email</label>
-                            <div class="form-line"></div>
                         </div>
                         
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" required>
                             <label for="subject">Subject</label>
-                            <div class="form-line"></div>
+                            <input type="text" id="subject" name="subject" required>
                         </div>
                         
                         <div class="form-group">
-                            <textarea id="message" name="message" rows="5" required></textarea>
                             <label for="message">Your Message</label>
-                            <div class="form-line"></div>
+                            <textarea id="message" name="message" rows="5" required></textarea>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <button type="submit" class="btn btn-primary submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div id="form-message" class="form-message"></div>
                     </form>
                 </div>
             </div>
@@ -548,54 +618,42 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span class="logo-text">Kavindana<span class="accent">.</span></span>
-                    <p class="footer-tagline">A young visionary at the crossroads of creativity and technology</p>
+            <!-- Sri Lankan Identity in Footer -->
+            <div class="footer-identity">
+                <div class="footer-flag">
+                    <div class="flag-stripe lion"></div>
+                    <div class="flag-stripe orange"></div>
+                    <div class="flag-stripe green"></div>
                 </div>
-                
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Navigation</h4>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#story">My Story</a></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">LinkedIn</a></li>
-                            <li><a href="#">Blog</a></li>
-                        </ul>
-                    </div>
+                <div class="footer-identity-text">
+                    <h4>Proudly Sri Lankan</h4>
+                    <p>Carrying forward a legacy of narrative and culture</p>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <div class="copyright">
-                    <p>&copy; 2023 Kavindana Vishwa Bandara Dissanayaka. All rights reserved.</p>
-                </div>
-                
-                <div class="footer-national">
-                    <img src="assets/images/sri-lanka-flag.svg" alt="Sri Lanka Flag" class="footer-flag">
-                    <span>Proudly Sri Lankan</span>
-                </div>
+            <!-- Footer Navigation -->
+            <div class="footer-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#creative">Creative Fusion</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="footer-copyright">
+                <p>&copy; 2023 Kavindana Vishwa Bandara Dissanayaka. All rights reserved.</p>
+                <p class="footer-quote">"Quietly building a foundation for something meaningful."</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
     </button>
 
-    <!-- JavaScript -->
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
