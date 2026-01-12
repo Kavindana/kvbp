@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <!-- Meta tags for responsiveness -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link external CSS and icon fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">MyName<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Mobile menu button -->
+    <div class="menu-btn"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <!-- Dark overlay on hero background -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Hello, I'm Jane Doe.</h1>
+      <p class="subtitle">Web Developer & Designer</p>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="about-section fade-in">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with a love for dark, minimalist design. I specialize in building responsive, animated websites using HTML, CSS, and JavaScript. My experience includes creating dynamic user interfaces and implementing modern web animations to engage users.</p>
+    <!-- Example image - user can place a portrait or symbolic graphic -->
+    <img src="profile.jpg" alt="Portrait of Jane Doe" class="about-image">
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section fade-in">
+    <h2>Selected Projects</h2>
+    <!-- Project cards with hover animations -->
+    <div class="project-cards">
+      <div class="card">
+        <img src="project1.png" alt="Project 1 screenshot">
+        <h3>Project One</h3>
+        <p>A web application that does XYZ. I used React and animations to bring it to life.</p>
+      </div>
+      <div class="card">
+        <img src="project2.png" alt="Project 2 screenshot">
+        <h3>Project Two</h3>
+        <p>An interactive portfolio (this site) with CSS animations and smooth scrolling.</p>
+      </div>
+      <!-- Add more project cards as needed -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section fade-in">
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Reach out to me on social media or send a message below.</p>
+    <!-- Simple contact form -->
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- External JavaScript for interactive behavior -->
+  <script src="script.js"></script>
+</body>
+</html>

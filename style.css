@@ -1,0 +1,201 @@
+:root {
+  --bg-color: #111;          /* Dark background */
+  --text-color: #eee;        /* Light text */
+  --accent-color: #1db954;   /* Example accent (green) */
+  --font: 'Roboto', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font);
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 100;
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.navbar .logo span {
+  color: var(--accent-color);
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-links li a:hover {
+  color: var(--accent-color);
+}
+/* Mobile Menu Button */
+.menu-btn {
+  display: none; /* Visible on small screens via media query */
+  flex-direction: column;
+  cursor: pointer;
+}
+.menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: var(--text-color);
+  margin: 4px;
+  transition: background 0.3s;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-image: url('hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background-color: rgba(0,0,0,0.6); /* Dark overlay for readability */
+}
+.hero-content {
+  position: relative; /* Above the overlay */
+  z-index: 1;
+  animation: fadeIn 1s ease-out; /* Fade in on load */
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+.hero-content .subtitle {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+/* Sections */
+section {
+  padding: 4rem 2rem;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-color);
+  padding-left: 0.5rem;
+}
+section p {
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 1s ease-out;
+}
+
+/* About Section Image */
+.about-image {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 1rem;
+}
+
+/* Projects (Cards) */
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.card {
+  background-color: #222;
+  padding: 1rem;
+  width: 300px;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 0.8rem;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.card h3 {
+  margin: 0.8rem 0 0.5rem;
+  color: var(--accent-color);
+}
+
+/* Contact Form */
+form {
+  max-width: 500px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: #222;
+  border: none;
+  color: var(--text-color);
+  border-radius: 4px;
+}
+form button {
+  padding: 0.8rem;
+  background: var(--accent-color);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+form button:hover {
+  background: #17a74a;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.3s;
+}
+@keyframes fadeIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disable animations if user prefers reduced motion (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .menu-btn { display: flex; }
+}
